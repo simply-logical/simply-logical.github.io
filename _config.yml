@@ -11,6 +11,10 @@ title: Simply Logical
 # Short description of your site
 description: Intelligent Reasoning by Example
 
+# Links
+bookURL: "http://book.simply-logical.space/"
+githubURL: "https://github.com/simply-logical/"
+
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
