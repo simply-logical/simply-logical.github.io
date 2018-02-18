@@ -1,19 +1,16 @@
 ---
 layout: page
 title: Project list
-subtitle: Google Summer of Code 2018
-permalink: "/gsoc/"
+permalink: "/projects/"
 use-site-title: false
 ---
 
 # Useful informations #
 If you want to discuss the projects you can reach us via:
-* [GSoC room @**Gitter**](https://gitter.im/simply-logical/GSoC?utm_source=share-link&utm_medium=link&utm_campaign=share-link), or
+* [**Gitter**](https://gitter.im/simply-logical/), or
 * [**Mailing list**](https://groups.google.com/forum/#!forum/simply-logical) using a thread relevant to selected project (see below).
 
-[Here](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Asimply-logical+label%3AGSoC) you can find issues relevant to our GSoC projects (tagged with **GSoC** label).
-
-As part of your application we require that you address or propose a partial solution to any of our [GSoC issues](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Asimply-logical+label%3AGSoC) (you can open one if you want). If you cannot submit a PR, please send your application anyway and we will consider it. Priority will be given to applicants who evidenced relevant software engineering skills.
+[Here](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Asimply-logical+label%3AGSoC) you can find issues relevant to our projects.
 
 # Projects #
 ## Project 1: Simply Logical -- online book ##
@@ -30,7 +27,7 @@ As part of your application we require that you address or propose a partial sol
 ### Description ###
 
 {: .box-note}
-The goal of this project is to improve the existing codebase of the online edition of the well-established "Simply Logical" textbook -- a free educational resource about Artificial Intelligence and Logic Programming with Prolog ([read more]({{ site.bookURL }})). The book mixes text with example Prolog code which makes it particularly suitable for conversion to an online, notebook-like study resource. 
+The goal of this project is to improve the existing codebase of the online edition of the well-established "Simply Logical" textbook -- a free educational resource about Artificial Intelligence and Logic Programming with Prolog ([read more]({{ site.bookURL }})). The book mixes text with example Prolog code which makes it particularly suitable for conversion to an online, notebook-like study resource.
 
 The book was originally written in an early version of Microsoft Word, which was later converted into HTML. We cleaned the code (from MS Word HTML tags) as much as possible with purpose-built [Python scripts](https://gist.github.com/So-Cool/cdf7b693f7cfdd5f8a65) based on the [BeautifulSoup4 package](https://www.crummy.com/software/BeautifulSoup/). Nevertheless, there are still plenty of legacy, redundant HTML tags and CSS styles, therefore the codebase requires cleaning and reformatting.
 
@@ -38,13 +35,13 @@ For example, noninteractive code blocks do not have syntax highlighting, and are
 
 Right now, it is based on Twitter's [Bootstrap](https://getbootstrap.com/). So there are probably many features that we do not currently use but could help to improve the aesthetics and functionality of the website, e.g. search feature or hyperlinked content index. The overall goal is for the book's website to have a more appealing, modern and fresh look and feel. Therefore, you can unleash your creativity to design and develop new style sheets for the online book, looking great on all platforms -- phones, tablets and PCs -- alike.
 
-The list of improvements given here is not exhaustive and if you see something simple that could be fixed please open a GitHub issue, label it *GSoC*, *GSoC 2018 Project 1* and if you feel like fixing it submit a PR (remember to link it in your proposal). If you write a script to parse and cleanup our HTML, please publish it as a GitHub Gist and link it in your issue/PR.
+The list of improvements given here is not exhaustive and if you see something simple that could be fixed please open a GitHub issue and if you feel like fixing it submit a PR. If you write a script to parse and cleanup our HTML, please publish it as a GitHub Gist and link it in your issue/PR.
 
 ---
 
 To make the book interactive we are embedding `pre` HTML tags containing Prolog code so that they can be rendered with [this](https://github.com/simply-logical/simply-logical/blob/master/bootstrap/js/lpn.js) JavaScript using [SWISH notebooks](https://swish.swi-prolog.org/). SWISH notebooks are similar to Jupyter Notebooks but specifically for Prolog. They are developed by the SWI-Prolog community that is behind one of the most functional, stable and widely used Prolog platforms available.
 
-Right now the Prolog code is directly embedded into the book's HTML, for example [here](https://github.com/simply-logical/simply-logical/blob/master/part_i.html#L48). We would like to explore how the book's text can be separated from the Prolog code. One way could be to use Jekyll's `include file.pl` syntax -- see [here](https://github.com/COMS30106/labs/blob/master/index.html#L30) as an example -- so that Prolog programs can be reused. Additionally, if we keep Prolog programs in a separate repository we can use them in multiple projects by importing the repository as a submodule. (This will also benefit our GSoC **Project 2**.)
+Right now the Prolog code is directly embedded into the book's HTML, for example [here](https://github.com/simply-logical/simply-logical/blob/master/part_i.html#L48). We would like to explore how the book's text can be separated from the Prolog code. One way could be to use Jekyll's `include file.pl` syntax -- see [here](https://github.com/COMS30106/labs/blob/master/index.html#L30) as an example -- so that Prolog programs can be reused. Additionally, if we keep Prolog programs in a separate repository we can use them in multiple projects by importing the repository as a submodule. (This will also benefit our **Project 2**.)
 
 Alternatively, our JavaScript can be improved to take a link to a Prolog file rather than embed the Prolog code directly in the HTML. To be more precise, right now we are passing *the whole program to be executed* as a string in the URL request. Instead, we would like to explore a syntax like this: [`https://swish.swi-prolog.org/?code=https://github.com/SWI-Prolog/swipl-devel/raw/master/demo/likes.pl&q=likes(sam,Food).`](https://swish.swi-prolog.org/?code=https://github.com/SWI-Prolog/swipl-devel/raw/master/demo/likes.pl&q=likes(sam,Food).), where only the Prolog program location is passed in the URL. To this end, code block inheritance has to be solved: right now we are able to concatenate Prolog code from multiple code blocks (inherit) into a new one. Whether we can do the same when using the latter approach is an open question that we will answer over the summer. (You can read more about SWISH API on SWISH's help page under *Preload SWISH with data* section.)
 
@@ -79,7 +76,7 @@ Aside from the web development, you will also design and implement a collection 
 
 You will also develop supplementary materials in SWISH notebooks, not embedded directly in the lecture slides.
 
-This project will reuse parts of *Simply Logical* [online book]({{ site.bookURL }}). Since cleaning up and refactoring the book's codebase is part of *Project 1* you might need to collaborate on extracting Prolog programs from the codebase. (This will help you develop your team skills.) In case there is nobody involved in that project you might need to do it on your own. Therefore, we ask you to **include a timeline covering these 2 possible scenarios in your proposal**. You are welcome to discuss with us and include in your proposal any suggestions regarding technologies that will be used to finalise this project. Maybe there is something awesome that will do the job just right and we don't know about it!
+This project will reuse parts of *Simply Logical* [online book]({{ site.bookURL }}). Since cleaning up and refactoring the book's codebase is part of *Project 1* you might need to collaborate on extracting Prolog programs from the codebase. (This will help you develop your team skills.) In case there is nobody involved in that project you might need to do it on your own. You are welcome to discuss with us any suggestions regarding technologies that will be used to finalise this project. Maybe there is something awesome that will do the job just right and we don't know about it!
 
 ## Project 3: Logic Programming exercises ##
 
@@ -100,7 +97,7 @@ This project gives you freedom to build a collection of platforms that will allo
 {: .box-warning}
 It is recommended to read the *Project 1* description beforehand to better understand the context of this project.
 
-Since there are no issues associated with this project, instead of submitting a PR you are free to discover AI puzzles and propose their Prolog solutions that can be implemented as a teaching aid. We would like these exercises to run directly in the web browser, if possible, using the technologies mentioned above; for example [SWISH](https://swish.swi-prolog.org/) extensions: [rendering data](https://swish.swi-prolog.org/example/rendering.swinb), embedding [Graphviz graphs](https://swish.swi-prolog.org/example/render_graphviz.swinb), [plots](https://swish.swi-prolog.org/example/render_c3.swinb), [sudoku](https://swish.swi-prolog.org/example/clpfd_sudoku.pl), [chess](https://swish.swi-prolog.org/example/clpfd_queens.pl), among others. However, if you are aware of software platforms that are better suited for the task, feel free to discuss them with us before you start writing your proposal.
+Since there are no issues associated with this project, instead of submitting a PR you are free to discover AI puzzles and propose their Prolog solutions that can be implemented as a teaching aid. We would like these exercises to run directly in the web browser, if possible, using the technologies mentioned above; for example [SWISH](https://swish.swi-prolog.org/) extensions: [rendering data](https://swish.swi-prolog.org/example/rendering.swinb), embedding [Graphviz graphs](https://swish.swi-prolog.org/example/render_graphviz.swinb), [plots](https://swish.swi-prolog.org/example/render_c3.swinb), [sudoku](https://swish.swi-prolog.org/example/clpfd_sudoku.pl), [chess](https://swish.swi-prolog.org/example/clpfd_queens.pl), among others. However, if you are aware of software platforms that are better suited for the task, feel free to discuss them with us before you start the work.
 
 Over the years we have accumulated a wealth of teaching material, which includes: web-based reasoning i.e. logical inference about knowledge obtained from online sources including [Wikipedia](https://github.com/COMS30106/assignment/wiki/Assignment-2#part-2-identity-crisis) and [Google Scholar](https://github.com/COMS30106/prolog_intro/tree/scholar/scholar), an online multiplayer [grid world](https://github.com/COMS30106/assignment/wiki/Assignment-2#part-4-optional) to experiment with search strategies, and a [testing and grading environment](https://github.com/COMS30106/assignment/tree/dev/ailp/library) for Prolog-based assignments, among others. Most of these are not entirely finished projects that need finishing touches. These are all experimental projects that we want to incorporate into Simply Logical educational resources once they mature.
 
