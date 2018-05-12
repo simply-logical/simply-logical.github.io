@@ -1,6 +1,6 @@
 # --- General options --- #
 
-url: "http://simply-logical.space"
+url: "https://simply-logical.space"
 baseurl: ""
 
 # Of course don't forget to change the username and projectname to YOUR username and project
@@ -12,7 +12,7 @@ title: Simply Logical
 description: Intelligent Reasoning by Example
 
 # Links
-bookURL: "http://book.simply-logical.space/"
+bookURL: "https://book.simply-logical.space/"
 githubURL: "https://github.com/simply-logical/"
 
 # --- Navigation bar options --- #
@@ -23,9 +23,9 @@ navbar-links:
   Blog: "blog"
   Get involved: "get-involved"
   Educational Resources:
-    - Simply Logical book: "http://book.simply-logical.space/"
-    - Slides: "http://slides.simply-logical.space/"
-    - Lab exercises: "http://labs.simply-logical.space/"
+    - Simply Logical book: "https://book.simply-logical.space/"
+    - Slides: "https://slides.simply-logical.space/"
+    - Lab exercises: "https://labs.simply-logical.space/"
   Contact: "contact-us"
 
 # Image to show in the navigation bar - image must be a square (width = height)

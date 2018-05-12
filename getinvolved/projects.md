@@ -66,7 +66,7 @@ While working on this project you will build a series of self-contained, interac
 {: .box-warning}
 It is recommended to read the *Project 1* description beforehand to better understand the context of this project.
 
-In comparison to *Project 1* this task puts more emphasis on your creativity. You will be supervised by Peter Flach, the author of "Simply Logical: Intelligent Reasoning by Example", who will guide you to design and build a series of interactive AI and Logic Programming lectures. The lectures will be self-contained and will cover one topic each. They will be used for both self-study and teaching, and should not take more than 1 hour to study/teach. You can see a pilot deck of slides that we are developing [here](http://labs.simply-logical.space/#/1/1).
+In comparison to *Project 1* this task puts more emphasis on your creativity. You will be supervised by Peter Flach, the author of "Simply Logical: Intelligent Reasoning by Example", who will guide you to design and build a series of interactive AI and Logic Programming lectures. The lectures will be self-contained and will cover one topic each. They will be used for both self-study and teaching, and should not take more than 1 hour to study/teach. You can see a pilot deck of slides that we are developing [here](https://labs.simply-logical.space/#/1/1).
 
 To get you started, together we will select 20 or so topics that you will use to build the series of lectures. You will design and implement HTML templates together with style sheets that will be based on `reveal.js` slide shows with embedded SWISH code blocks. The slide decks will be build with Jekyll and hosted on GitHub Pages.
 
@@ -107,7 +107,7 @@ If you develop a new Prolog programming exercise, implementing an accompanying a
 - [Prolexa](https://github.com/So-Cool/prolexa) -- Prolog reasoner that is accessed via Amazon's Alexa,
 - [Grid world](https://github.com/COMS30106/assignment/wiki) -- a square grid world with (dynamic) obstacles, oracles and charging stations to test search strategies (multiplayer-enabled),
 - [Mastermind](https://en.wikipedia.org/wiki/Mastermind_(board_game)),
-- [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) and some [theory](http://book.simply-logical.space/part_ii.html#reasoning_with_structured_knowledge),
-- [Jumping frogs puzzle](http://primefactorisation.com/frogpuzzle/) and some [theory](http://book.simply-logical.space/part_ii.html#informed_search),
+- [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) and some [theory](https://book.simply-logical.space/part_ii.html#reasoning_with_structured_knowledge),
+- [Jumping frogs puzzle](http://primefactorisation.com/frogpuzzle/) and some [theory](https://book.simply-logical.space/part_ii.html#informed_search),
 - [http://cplint.ml.unife.it/](http://cplint.ml.unife.it/) -- "a suite of programs for reasoning with probabilistic logic programs" ([source](https://github.com/friguzzi/cplint)),
 - [http://lpsdemo.interprolog.com/](http://lpsdemo.interprolog.com/) -- contracts reasoning ([example](http://lpsdemo.interprolog.com/example/lpsExamples.swinb)).

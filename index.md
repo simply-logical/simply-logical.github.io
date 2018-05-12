@@ -11,9 +11,9 @@ We are committed to maintaining a suite of freely available interactive online e
 
 Our teaching materials were originally based on the content of "Simply Logical: Intelligent Reasoning by Example" textbook by Peter Flach, which discusses methods to implement intelligent reasoning by means of Prolog programs. They are suitable for self-study and teaching undergraduate level introductory course to Artificial Intelligence and Logic Programming with Prolog.
 
- The book was written to embody a "teaching by showing, learning by doing" philosophy (explained in [the Preface](http://book.simply-logical.space/#style-of-presentation)) that our organisation adopts and promotes with all of our educational resources.
+ The book was written to embody a "teaching by showing, learning by doing" philosophy (explained in [the Preface](https://book.simply-logical.space/#style-of-presentation)) that our organisation adopts and promotes with all of our educational resources.
 
-If you are interested, more details about the book's history and origins of Simply Logical organisation are available [here](http://book.simply-logical.space/about.html#history).
+If you are interested, more details about the book's history and origins of Simply Logical organisation are available [here](https://book.simply-logical.space/about.html#history).
 
 
 # Using our resources #
